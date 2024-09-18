@@ -3,7 +3,7 @@
 <i>Converter textos para voz usando Python!</i>  
 
 
-![Versão](https://img.shields.io/badge/version-0.0.5-orange)
+![Versão](https://img.shields.io/badge/version-0.0.8-orange)
 ![Licença](https://img.shields.io/badge/license-MIT-orange)
 [![Sponsor](https://img.shields.io/badge/💲Donate-yellow)](https://apoia.se/paulocesar-dev404)
 
@@ -128,8 +128,7 @@ try:
         volume='loud',  # Ajusta o volume da voz
         pitch='-50%',   # Adiciona o valor do pitch (tom de voz)
         output_format='audio-16khz-128kbitrate-mono-mp3',  # Formato de saída
-        output_dir=out_dir,
-        emphasis='strong'  # Adiciona ênfase
+        output_dir=out_dir
     )
 
     # Verifica se o arquivo foi gerado corretamente
@@ -143,9 +142,12 @@ except Exception as e:
 
 ## Contribuições e Suporte
 
-Se tiver dúvidas ou sugestões, abra uma [issue aqui](https://github.com/PauloCesar-dev404/youtube_analyzer/issues).
-
+Se tiver dúvidas ou sugestões, abra uma [issue aqui](https://github.com/PauloCesar-dev404/youtube_analyzer/issues)
+<br>
 ---
+[![Sponsor](https://img.shields.io/badge/Documentação-green)](https://github.com/PauloCesar-dev404/MSpeechPy/tree/main/doc)
+
+
 
 
 

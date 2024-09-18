@@ -1,24 +1,17 @@
 import requests
-from ..builds.voices import Voices
-from ..builds.speech import SpeechText
-
-from ..section.Auth import AuthMicrosoft
-
-auth = AuthMicrosoft()
 
 
 class SpeechpyClient:
-    def __init__(self):
-        self.__token = auth.load_section()
-
     @property
-    def get_voices(self) -> Voices:
+    def get_voices(self):
+        from ._builds import get_access_token
+        from ._builds import Voices
         # Endpoint da API para obter a lista de vozes
-        endpoint = 'https://westeurope.tts.speech.microsoft.com/cognitiveservices/voices/list'  # Substitua 'westeurope' pela sua região
+        endpoint = 'https://westeurope.tts.speech.microsoft.com/cognitiveservices/voices/list'
 
         # Cabeçalhos para a requisição
         headers = {
-            'Authorization': f'Bearer {self.__token}',
+            'Authorization': f'Bearer {get_access_token()}',
             'Content-Type': 'application/ssml+xml'
         }
 
@@ -32,7 +25,14 @@ class SpeechpyClient:
         return vc
 
     @property
-    def text_to_speech(self) -> SpeechText:
+    def text_to_speech(self):
+        from ._builds import SpeechText
         """converter texto para voz"""
         v = SpeechText()
         return v
+
+
+def authenticate():
+    """obter o token de seção atual"""
+    from ._builds.api import get_access_token
+    return get_access_token()

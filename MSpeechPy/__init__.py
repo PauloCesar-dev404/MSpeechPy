@@ -1,4 +1,6 @@
-from .section.Auth import AuthMicrosoft
-from .client.client import SpeechpyClient
+from .client import SpeechpyClient,authenticate
+from .ssml_builder import SSMLBuilder
 
-__all__ = ['SpeechpyClient', 'AuthMicrosoft']
+
+
+

@@ -65,6 +65,7 @@ class NetworkError(MSpeechPyExeptions):
 
         return super().__str__()
 
+
 class MaxrequestsError(MSpeechPyExeptions):
     """rede."""
 
