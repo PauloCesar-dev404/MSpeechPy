@@ -103,7 +103,7 @@ client.text_to_speech.set_ssml_format(
 ### obtendo o audio passando uma string ssml
   Após criar um ssml ou usando o gerador da  biblioteca ou de outra maneira, você pode passar ao método `set_ssml_format`,se o ssml for válido será obtido um resultado em audio.
 
-> Vc deve saber quais formatos,região e efeitos são suportados da voz escolhida e. seu ssml.
+> Vc deve saber quais formatos,região e efeitos são suportados da voz escolhida em seu ssml.
 
 ```python
 from MSpeechPy import SpeechpyClient
