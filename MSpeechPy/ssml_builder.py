@@ -132,17 +132,20 @@ class SSMLBuilder:
         Constrói e retorna o SSML completo.
         """
         voices_tags = '\n'.join(
-            f'''
-            <voice name="{voice["name"]}" effect="{voice["effect"]}">
-                {"\n".join(voice["elements"])}
-            </voice>
-            '''
+            '<voice name="{name}" effect="{effect}">{elements}</voice>'.format(
+                name=voice["name"],
+                effect=voice["effect"],
+                elements='\n'.join(voice["elements"])
+            )
             for voice in self.voices
         )
 
-        return f"""
-        <speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" 
-            xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="{self.lang}">
+        return """
+        <speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis"
+            xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="{lang}">
             {voices_tags}
         </speak>
-        """
+        """.format(
+            lang=self.lang,
+            voices_tags=voices_tags
+        )

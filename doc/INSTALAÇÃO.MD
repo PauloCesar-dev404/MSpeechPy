@@ -13,3 +13,6 @@ pip install git+
 ```commandline
 pip install azure-identity azure-spe
 ```
+
+##  instale o azure-developer-cli para seu sitema:
+- [site oficial](https://learn.microsoft.com/pt-br/azure/developer/azure-developer-cli/install-azd?tabs=winget-windows%2Cbrew-mac%2Cscript-linux&pivots=os-linux)

@@ -3,7 +3,7 @@
 <i>Converter textos para voz usando Python!</i>  
 
 
-![Versão](https://img.shields.io/badge/version-0.0.8-orange)
+![Versão](https://img.shields.io/badge/version-0.0.9-orange)
 ![Licença](https://img.shields.io/badge/license-MIT-orange)
 [![Sponsor](https://img.shields.io/badge/💲Donate-yellow)](https://apoia.se/paulocesar-dev404)
 
