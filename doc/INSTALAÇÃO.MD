@@ -25,5 +25,9 @@ Para usar o Azure Developer CLI, siga as instruções de instalação adequadas 
 
 [Guia oficial de instalação do Azure Developer CLI](https://learn.microsoft.com/pt-br/azure/developer/azure-developer-cli/install-azd?tabs=winget-windows%2Cbrew-mac%2Cscript-linux&pivots=os-linux)
 
+# autenticação do seu aplicativo
+```commandline 
+azd auth login --use-device-code
+```
 
 
